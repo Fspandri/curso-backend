@@ -1,0 +1,1 @@
+[{"nombre":"brownie","descripcion":"chocolate","precio":4000,"img":"","codigo":464829,"stock":15,"id":1},{"nombre":"alfajor","descripcion":"coco","precio":"3500","img":"","codigo":234678,"stock":15,"id":2}]
