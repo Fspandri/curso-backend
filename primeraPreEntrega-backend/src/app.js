@@ -1,5 +1,6 @@
 import express from 'express'
 import prodRouter from "./routes/productos.routes.js";
+import routerCart from "./routes/cart.routes.js";
 import { __dirname } from "./path.js";
 import path from "path";
 
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 // **** Routes ****//
 app.use("/static", express.static(path.join(__dirname, "/public")));
 app.use("/api/products", prodRouter);
+app.use('/api/carts', routerCart);
 
 // **** Server ****//
 app.listen(PORT, () => {
