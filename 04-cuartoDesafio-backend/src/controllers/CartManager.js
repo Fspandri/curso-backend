@@ -7,16 +7,6 @@ export class CartManager {
         this.path = path
     }
 
-    // static incrementarID() {
-    //     if (this.idIncrement) {
-    //         this.idIncrement++
-    //     } else {
-    //         this.idIncrement = 1
-    //     }
-    //     return this.idIncrement
-    // }
-
-
     async createCart() {
         const nuevoCart = {
           id: uuidv4(),
@@ -59,8 +49,7 @@ export class CartManager {
         if(productIndex){
             cart.products[productIndex].quantity += 1;
         } else {
-            cart.products.push({id: pid, quantity: 1});
-            
+            cart.products.push({id: pid, quantity: 1}); 
         }
 
         await fs.writeFile(this.path, JSON.stringify(carts))

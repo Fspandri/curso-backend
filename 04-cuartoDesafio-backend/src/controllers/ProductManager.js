@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs'
+import { v4 as uuidv4 } from 'uuid'
 
 
 export class ProductManager {
@@ -6,6 +7,7 @@ export class ProductManager {
     constructor(path) {
         this.path = path
     }
+
 
     getProducts = async () => {
         const products = JSON.parse(await fs.readFile(this.path, 'utf-8'))
@@ -27,6 +29,7 @@ export class ProductManager {
         if(products.find(producto => producto.id == product.id)) {
             return {estado: 400, respuesta: "Producto ya existente"}
         }
+        product.id = uuidv4()
         products.push(product)
         await fs.writeFile(this.path, JSON.stringify(products))
         return {estado: 200, respuesta: "Producto cargado correctamente"}

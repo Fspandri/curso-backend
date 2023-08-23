@@ -1,28 +1,37 @@
-<h1>Productos</h1>
+<h1>Nuevo Producto</h1>
 
-<main>
+<form id="formProduct" class="w-50 m-4">
 
-	<form id="formProduct">
-		<label for='title'>Titulo</label>
-		<input type='text' name='title' required />
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" name="nombre" class="form-control" required>
+    </div>
 
-		<label for='description'>Descripcion</label>
-		<input type='text' name='description' required />
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripcion</label>
+        <input type="text" name="descripcion" class="form-control" required>
+    </div>
 
-		<label for='price'>Precio</label>
-		<input type='number' name='price' required />
+    <div class="mb-3">
+        <label for="precio" class="form-label">Precio</label>
+        <input type="number" name="precio" class="form-control" required>
+    </div>
 
-		<label for='status'>Status</label>
-		<input type='text' name='status' required />
+    <div class="mb-3">
+        <label for="codigo" class="form-label">Codigo</label>
+        <input type="text" name="codigo" class="form-control" required>
+    </div>
 
-		<label for='code'>Código</label>
-		<input type='text' name='code' required />
+    <div class="mb-3">
+        <label for="stock" class="form-label">Stock</label>
+        <input type="text" name="stock" class="form-control" required>
+    </div>
 
-		<label for='stock'>Stock</label>
-		<input type='number' name='stock' required />
+    <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <input type="text" name="status" class="form-control" required>
+    </div>
 
-		<button type='submit'>Agregar Producto</button>
-	</form>
+    <button type="submit" class="btn btn-primary">Crear Producto</button>
 
-	<div></div>
-</main>
+</form>
