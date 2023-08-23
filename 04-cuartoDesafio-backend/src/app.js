@@ -1,11 +1,12 @@
 import express from "express"
 import { engine } from "express-handlebars"
+import { Server } from "socket.io";
 import prodRouter from "./routes/productos.routes.js";
 import routerCart from "./routes/cart.routes.js";
 import { __dirname } from "./path.js";
 import path from "path";
 import { ExpressHandlebars } from 'express-handlebars';
-import { Server } from "socket.io";
+
 
 const app = express();
 const PORT = 8080;
@@ -25,6 +26,10 @@ app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
 app.set("views", path.resolve(__dirname, "./views"))
 
+// **** Conexion de Socket.io ****//
+io.on('connection', socket => {
+	console.log("Conexión con Socket.io");
+}
 
 // **** Routes ****//
 app.use("/static", express.static(path.join(__dirname, "/public")));
