@@ -1,0 +1,16 @@
+form {
+    width: 40%;
+    padding-left: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+#productsDiv {
+    margin-left: 50px;
+}
+
+/* .cardstyle{
+    height: 100px;
+} */
